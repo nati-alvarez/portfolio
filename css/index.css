@@ -1,0 +1,379 @@
+@font-face {
+  font-family: "Italic Bricks";
+  src: url("../fonts/ItalicBricks.woff"); }
+@font-face {
+  font-family: "Octagonal";
+  src: url("../fonts/Octagonal.woff"); }
+body {
+  display: flex;
+  margin: 0;
+  color: #202020;
+  position: relative;
+  font-family: "Octagonal";
+  font-size: 22px; }
+  body p {
+    line-height: 1.4em; }
+  body nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1vh 1rem;
+    position: sticky;
+    top: 0px;
+    left: 0px;
+    height: 98vh;
+    background: whitesmoke;
+    font-size: 14px;
+    background: #ACBDDB; }
+    body nav img {
+      display: block;
+      margin: 0 auto; }
+    body nav a {
+      display: block;
+      margin: 50px 0px; }
+    body nav .nav-start a {
+      border-bottom: 3px solid black;
+      width: 100px;
+      color: black;
+      font-family: "Italic Bricks";
+      padding-bottom: 5px;
+      text-align: center;
+      text-decoration: none; }
+  body main {
+    width: 100%; }
+    body main header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-weight: normal;
+      background: rgba(0, 0, 0, 0.6);
+      color: snow;
+      position: relative;
+      overflow: hidden; }
+      body main header #background-video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        min-width: 100%;
+        min-height: 100%;
+        z-index: -1; }
+      body main header .header-content {
+        position: relative;
+        width: 80%;
+        max-width: 1000px; }
+      body main header img {
+        width: 185px;
+        height: 185px;
+        border-radius: 50%;
+        margin: 0 auto;
+        display: block;
+        background: transparent; }
+      body main header .name {
+        margin-top: 0px;
+        font-size: 3rem;
+        font-family: "Italic Bricks";
+        color: #ACBDDB;
+        letter-spacing: 0.8rem;
+        text-align: center; }
+      body main header .profession {
+        text-align: center; }
+      body main header .description {
+        width: 80%;
+        margin: 0 auto; }
+  body section {
+    padding: 5% 2%; }
+    body section .title {
+      font-family: "Italic Bricks";
+      text-align: center; }
+  body #skills .my-skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; }
+    body #skills .my-skills .skill {
+      width: 40%;
+      padding: 5% 2%; }
+      body #skills .my-skills .skill h3 {
+        text-align: center; }
+      body #skills .my-skills .skill img {
+        display: block;
+        margin: 0 auto; }
+      body #skills .my-skills .skill p {
+        width: 80%;
+        margin: 0 auto;
+        margin-top: 5%; }
+  body #work .my-work {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; }
+    body #work .my-work .project {
+      min-width: 300px;
+      min-height: 250px;
+      width: 30%;
+      border-radius: 3px;
+      box-shadow: 2px 2px 5px 1px #a0a0a0;
+      margin: 2% 0px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      position: relative;
+      transition: transform 400ms ease 50ms;
+      transform-origin: center; }
+      body #work .my-work .project:hover {
+        cursor: pointer;
+        transform: scale(1.05); }
+      body #work .my-work .project .project-thumb {
+        z-index: -1;
+        height: 100%;
+        width: 100%;
+        object-fit: fill;
+        position: absolute;
+        top: 0px;
+        left: 0px; }
+      body #work .my-work .project h3 {
+        transition: all 400ms ease-in-out;
+        color: snow;
+        background: rgba(32, 32, 32, 0.5);
+        font-size: 1em;
+        padding: 5px;
+        border-radius: 3px; }
+    body #work .my-work .project:hover h3 {
+      background: #202020;
+      transform: scale(1.1); }
+  body #contact .contact-info {
+    max-width: 1000px;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around; }
+    body #contact .contact-info img {
+      vertical-align: middle;
+      display: inline-block;
+      margin-right: 10px;
+      padding: 10px;
+      border-radius: 50%;
+      background: #ACBDDB; }
+  body #contact form {
+    border: 1px solid #222222;
+    min-width: 300px;
+    width: 60%;
+    margin: 0 auto;
+    padding: 2% 5%; }
+    body #contact form .form-field {
+      margin: 20px 0px; }
+    body #contact form label {
+      font-weight: bold;
+      display: block;
+      margin-bottom: 15px; }
+    body #contact form input, body #contact form textarea {
+      padding: 0.5% 2%;
+      font-size: 22px;
+      display: block;
+      min-width: 250px;
+      width: 40%;
+      border-radius: 3px;
+      border: 1px solid #202020;
+      font-family: "Octagonal";
+      font-weight: bold; }
+    body #contact form textarea {
+      width: 100%;
+      min-height: 125px; }
+    body #contact form button {
+      margin: 20px 0px;
+      border: none;
+      background: #ACBDDB;
+      padding: 5px 20px;
+      font-size: 22px;
+      font-family: "Italic Bricks";
+      box-shadow: 1px 1px 3px 1px #202020; }
+    body #contact form .form-status #loading {
+      margin: 0;
+      color: dimgray;
+      display: none; }
+    body #contact form .form-status #success {
+      margin: 0;
+      display: none;
+      background: mediumseagreen;
+      border-radius: 3px;
+      padding: 0px 10px;
+      color: honeydew;
+      font-weight: bold; }
+    body #contact form .form-status #error {
+      margin: 0;
+      display: none;
+      background: crimson;
+      border-radius: 3px;
+      padding: 0px 10px;
+      color: snow;
+      font-weight: bold; }
+
+#project-modal {
+  position: fixed;
+  z-index: 100;
+  background: #202020;
+  width: 100%;
+  height: 100%;
+  color: white;
+  display: none;
+  justify-content: center;
+  flex-direction: column; }
+  #project-modal #close-modal {
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+    font-family: "Italic Bricks";
+    color: #E70D0D; }
+  #project-modal .carousel {
+    margin: 0 auto;
+    width: 58vw;
+    max-width: 1200px;
+    min-height: 175px;
+    max-height: 800px;
+    height: 26vw;
+    position: relative; }
+    #project-modal .carousel #previous-slide, #project-modal .carousel #next-slide {
+      user-select: none;
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(32, 32, 32, 0.5);
+      padding: 10px;
+      border-radius: 50%;
+      display: flex; }
+      #project-modal .carousel #previous-slide:hover, #project-modal .carousel #next-slide:hover {
+        background: #202020; }
+    #project-modal .carousel #previous-slide {
+      left: 10px;
+      padding-right: 12px; }
+    #project-modal .carousel #next-slide {
+      right: 10px;
+      padding-left: 12px; }
+      #project-modal .carousel #next-slide img {
+        transform: rotateY(180deg); }
+    #project-modal .carousel #modal-image {
+      width: 100%;
+      height: 100%;
+      object-fit: fill; }
+    #project-modal .carousel .slide-counter {
+      display: block;
+      color: darkgrey;
+      text-align: center;
+      margin: 0 auto;
+      margin-top: 5px;
+      font-size: 20px; }
+  #project-modal #modal-body {
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto;
+    margin-top: 60px; }
+    #project-modal #modal-body a {
+      color: #ACBDDB; }
+  #project-modal .links {
+    margin: 0 auto;
+    margin-top: 40px; }
+    #project-modal .links .link {
+      text-align: center;
+      display: inline-block;
+      margin: 0 auto;
+      margin: 0px 30px; }
+      #project-modal .links .link img {
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 10px; }
+    #project-modal .links a {
+      color: white;
+      font-weight: bold; }
+  #project-modal #slide-count, #project-modal #current-slide {
+    color: white; }
+
+@media (max-width: 1080px) {
+  .project {
+    width: 45% !important; } }
+@media (max-width: 850px) {
+  body {
+    flex-direction: column; }
+    body nav {
+      flex-direction: row;
+      height: auto;
+      z-index: 3; }
+      body nav .nav-start a {
+        display: inline-block;
+        margin: 0px 10px; }
+      body nav .nav-end a {
+        display: inline-block;
+        margin: 0px 10px; } }
+@media (max-width: 800px) {
+  body #skills .my-skills {
+    flex-direction: column !important; }
+    body #skills .my-skills .skill {
+      width: 98%;
+      margin: 0 auto; }
+
+  .project {
+    margin: 0 auto !important;
+    margin-bottom: 5% !important;
+    width: 85% !important; }
+
+  #contact h3 {
+    text-align: center; } }
+@media (max-width: 680px) {
+  body main header .name {
+    font-size: 2.6rem; }
+
+  body main header .profession {
+    font-size: 1.3em; }
+
+  body main header .description {
+    font-size: 20px;
+    width: 100%; }
+
+  body main header img {
+    width: 145px;
+    height: 145px; }
+
+  #contact form {
+    width: 80% !important; }
+
+  nav .nav-start {
+    display: none; }
+
+  nav .nav-end img {
+    width: 25px;
+    height: 25px; }
+
+  #project-modal #modal-body {
+    font-size: 18px; }
+  #project-modal .carousel {
+    width: 80vw;
+    height: 25vw; }
+
+  #contact h3 img {
+    display: block !important;
+    margin: 0 auto !important; }
+
+  #contact .phone, #contact .email {
+    text-align: center !important; } }
+@media (max-width: 450px) {
+  body main header .name {
+    font-size: 1.8rem; }
+
+  body main header img {
+    display: none; }
+
+  .project {
+    height: 50vw !important; }
+
+  #close-modal {
+    font-size: 1em !important; }
+
+  .links {
+    font-size: 18px; }
+
+  #contact .contact-info {
+    flex-direction: column !important; } }
+
+/*# sourceMappingURL=index.css.map */

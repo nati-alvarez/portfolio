@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Natividad Alvarez - Web Developer</title>
+    <link rel="stylesheet" href="css/index.css"/>
+</head>
+<body>
+    <nav>
+        <div class="nav-start">
+            <a href="#about-me">About Me</a>
+            <a href="#skills">My Skills</a>
+            <a href="#work">My Work</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <div class="nav-end">
+            <a href="https://github.com/nati-alvarez" target="_blank"><img height="35" width="35" src="./github.svg" alt="github logo"/></a>
+            <a href="https://www.linkedin.com/in/natividad-alvarez-4015b8140/" target="_blank"><img height="35" width="35" src="./linkedin.svg" alt="linkedin logo"></a>
+        </div>
+    </nav>
+    <main>
+        <header id="about-me">
+            <video id="background-video" autoplay muted loop>
+                <source src="./code.mp4" type="video/mp4" />
+            </video>
+            <div class="header-content">
+                <h1 class="name">Natividad Alvarez</h1>
+                <img class="picture" src="./me-transparent.jpg"/>
+                <h2 class="profession">Full-Stack Website Developer</h2>
+                <p class="description">
+                    Hi, there! My name is Natividad, Im 19 years old, and I am a full-stack JavaScript Developer.
+                    I have been studying programming and honing my coding skills for a little over 2 years now.
+                    Although I know many
+                    languages and enjoy work with a variety of languages, My main skills are in HTML, CSS, and JavaScript both client
+                    and server-side. The frameworks and libraries that I am most familiar with are React, Angular, Node.js, Sass.
+                    I also know how to work with SQL and MongoDB databases.
+                    To see some of my most up to date work and get in touch with me, keep scrolling on through the site!
+            </div>
+        </header>
+        <section id="skills">
+            <h2 class="title">My Skills</h2>
+            <div class="my-skills">
+                <div class="skill">
+                    <h3>Front-End Development</h3>
+                    <img width="65" height="65" src="./front-end.svg"/>
+                    <p>
+                        Though I'm now a full-stack dev, I have my roots as a
+                        front-end developer. At the core of that of course is
+                        my in depth knowledge and understanding of HTML, CSS, 
+                        and JavaScript.
+                        Aside from the fundamentals, I also am well versed with JS
+                        frameworks like Angular and React and CSS frameworks and preprocessors
+                        like Bootstrap, Bulma.io, and Sass. 
+                    </p>
+                </div>
+                <div class="skill">
+                    <h3>Back-End Development</h3>
+                    <img width="65" height="65" src="./back-end.svg"/>
+                    <p>
+                        On the server-side of things, my main focus is in
+                        Node.js although I have worked with PHP
+                        and C# in the past. I am most familiar with building Express
+                        web apps and API's using a MySQL database. For authentication with 
+                        my API's the go-to is json web tokens or OAuth. I have also
+                        used No-SQL databases like MongoDB, though I find a RDBMS
+                        is suitable for most situations.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section id="work">
+            <h2 class="title">My Work</h2>
+            <div class="my-work">
+                <div class="project" data-project="chatrbox">
+                    <img class="project-thumb" src="./images/work/chatrbox1.png"/>
+                    <h3>Chatrbox</h3>
+                </div>
+                <div class="project" data-project="socialmedia">
+                    <img class="project-thumb" src="./images/work/socialmedia2.png"/>
+                    <h3>Social Media Web App</h3>
+                </div>
+                <div class="project" data-project="marketing">
+                    <img class="project-thumb" src="./images/work/dma1.png"/>
+                    <h3>Marketing Website</h3>
+                </div>
+                <div class="project" data-project="ecommerce">
+                    <img class="project-thumb" src="./images/work/ecommerce1.png"/>
+                    <h3>React.js Ecommerce Store</h3>
+                </div>
+            </div>
+        </section>
+        <section id="contact">
+            <h2 class="title">Contact Me</h2>
+            <div class="contact-info">
+                <div class="phone">
+                    <h3><img width="50" height="50" src="./images/phone.svg" alt="phone number"/> 864 206-4028</h3>
+                </div>
+                <div class="email">
+                    <h3><img width="50" height="50" src="./images/email.svg" alt="email address"/> tivialvarez@gmail.com</h3>
+                </div>
+            </div>
+            <form onsubmit="sendEmail(event)">
+                <div class="form-field">
+                    <label>Name:</label>
+                    <input id="name" placeholder="First and last name."/>
+                </div>
+                <div class="form-field">
+                    <label>Email:</label>
+                    <input id="email" placeholder="The email address I can reach you at."/>
+                </div>
+                <div class="form-field">
+                    <label>Reason for Contacting:</label>
+                    <input id="subject" placeholder="What's this message about?"/>
+                </div>
+                <div class="form-field">
+                    <label>Message:</label>
+                    <textarea id="message" placeholder="Write your message here!"></textarea>
+                </div>
+                <button id="submit-btn">Submit</button>
+                <div class="form-status">
+                    <p id="loading">Sending message...</p>
+                    <p id="success">Your message was sent! Expect to hear back from me soon.</p>
+                    <p id="error"></p>
+                </div>
+            </form>
+        </section>
+    </main>
+    <div id="project-modal">
+        <div onclick="closeModal()"id="close-modal">close</div>
+        <div class="carousel">
+            <img id="modal-image" src=""/>
+            <div id="previous-slide"> <img src="./arr.svg" width="25" height="25"/> </div>
+            <div id="next-slide"> <img src="./arr.svg" width="25" height="25"/> </div>
+            <span class="slide-counter">
+                slide <span id="current-slide"></span>
+                of <span id="slide-count"></span>
+            </span>
+        </div>
+        <div id="modal-body"></div>
+        <div class="links">
+            <div class="link">
+                <a id="site-link" target="_blank" href="">
+                    <img src="./site.svg" width="30" height="30"/>
+                    View Site
+                </a>
+            </div>
+            <div class="link">
+                <a id="code-link" target="_blank" href="">
+                    <img src="./code.svg" width="30" height="30"/>
+                    View Source Code
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./js/projectModal.js"></script>
+<script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+    (function(){
+        emailjs.init("user_RWgtaPp3XvUUXui0qhE05");
+    })();
+    function sendEmail(e){
+        e.preventDefault();
+        var success = document.getElementById('success');
+        var loading = document.getElementById('loading');
+        var error = document.getElementById('error');
+
+        error.style.display = 'none';
+        error.display = 'none'; 
+        success.style.display = 'none';
+        success.display = 'none';
+        loading.style.display = 'inline-block';
+        loading.display = 'inline-block';
+
+        var submitBtn = document.getElementById('submit-btn');
+        submitBtn.disabled = true;
+
+        var from = document.getElementById('email').value;
+        var subject = document.getElementById('subject').value;
+        var name = document.getElementById('name').value;
+        var message = document.getElementById('message').value;
+
+        if(!from || !subject || !name || !message){
+            loading.display = "none";
+            loading.style.display = "none";
+            error.display = "inline-block";
+            error.style.display = "inline-block";
+            error.innerHTML = "All fields are required";
+            submitBtn.disabled = false;
+            return;
+        }
+
+        emailjs.send("gmail", "template_4hH6X6Vb", {from, subject, message, name}).then(res=>{
+            loading.display = 'none';
+            loading.style.display = 'none';
+            success.display = 'inline-block';
+            success.style.display = 'inline-block';
+            setTimeout(()=>{
+                success.display = 'none';
+                success.style.display = 'none';
+            }, 3000)
+            document.getElementById('email').value = "";
+            document.getElementById('name').value = "";
+            document.getElementById('subject').value = "";
+            document.getElementById('message').value = "";
+            submitBtn.disabled = false;
+        }, err=>{
+            submitBtn.disabled = false;
+            loading.display = 'none';
+            loading.style.display = 'none';
+            error.display = "inline-block";
+            error.style.display = "inline-block";
+            error.innerHTML = "Server error. Please try again later.";
+            submitBtn.disabled = false;
+            console.log(err)
+        });
+    }
+</script>
+</html>
